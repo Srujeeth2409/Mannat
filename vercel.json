@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "Mannat/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "50mb" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "Mannat/wsgi.py" }
+  ]
+}
